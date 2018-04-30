@@ -1,6 +1,7 @@
 #include <math.h>
 #include <GL\glut.h>
 #include "Func.c"
+int GamerNum;
 //------------------------------------------------------------------------------
 void DrawMainField(double width, double height, int N){
 	glPushMatrix();
@@ -84,6 +85,7 @@ void DrawBlocks(){
 }
 //------------------------------------------------------------------------------
 void DrawBullets(int kek){
+	int i;
 	for( i = 0; i < 20; i ++) 
 		if (Player[kek].bullets[i].time > 0) {
 			glPushMatrix();
